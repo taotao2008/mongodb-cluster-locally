@@ -28,8 +28,8 @@ services:
     command:
       - "--replSet"
       - "tutorial-cluster"
-#      - "--keyFile"
-#      - "/data/db/mongo-replica-set.key"
+      - "--keyFile"
+      - "/data/db/mongo-replica-set.key"
 
 
 
@@ -45,8 +45,8 @@ services:
     command:
       - "--replSet"
       - "tutorial-cluster"
-#      - "--keyFile"
-#      - "/data/db/mongo-replica-set.key"
+      - "--keyFile"
+      - "/data/db/mongo-replica-set.key"
 
   replica02:
     container_name: replica02
@@ -60,8 +60,8 @@ services:
     command:
       - "--replSet"
       - "tutorial-cluster"
-#      - "--keyFile"
-#      - "/data/db/mongo-replica-set.key"
+      - "--keyFile"
+      - "/data/db/mongo-replica-set.key"
 
 networks:
   mongo-cluster-network:
