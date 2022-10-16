@@ -3,13 +3,11 @@ version: "3.8"
 services:
   temp-instance:
     container_name: temp-instance
-    user: "root"
     image: mongo:5.0.5
     volumes:
       - ./init-mongo-db:/docker-entrypoint-initdb.d
     networks:
       - mongo-cluster-network
-
 
   primary:
     container_name: primary
@@ -30,8 +28,6 @@ services:
       - "tutorial-cluster"
       - "--keyFile"
       - "/data/db/mongo-replica-set.key"
-
-
 
   replica01:
     container_name: replica01
