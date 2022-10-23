@@ -1,23 +1,7 @@
 
 <p align="center">
-  <img width="460" height="300" src="<picture_url>">
+  <img width="460" height="300" src="https://miro.medium.com/max/720/1*sNzod3fGzIydO0w2DeNnow.png">
 </p>
 
-<h1 align="center"><a href="<blog_url>"><blog_name>
+<h1 align="center"><a href="https://faun.pub/mongodb-replica-set-configuration-976c9e55c6f3">MongoDB replica set configuration
 </a></h1>
-
-
-`openssl rand -base64 741 > mongo-replica-set.key
-chmod 600 mongodb.key`
-
-
-mongodb://root:root@localhost:27017,localhost:27027,localhost:27037?authSource=admin&replicaSet=tutorial-cluster
-
-
-rs.slaveOk()
-
-
-
-mongo -u root -p root --authenticationDatabase admin
-mongo -port 27027 -u root -p root --authenticationDatabase admin
-mongo -port 27037 -u root -p root --authenticationDatabase admin
