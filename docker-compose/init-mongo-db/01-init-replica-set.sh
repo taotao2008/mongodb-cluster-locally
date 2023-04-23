@@ -33,17 +33,17 @@ rs.status()
 EOF
 echo "########### Initiating replica set ###########"
 mongosh --host primary -u root -p root  <<EOF
-rs.initiate()
-EOF
-echo "########### Adding replica01 to replica set ###########"
-mongosh --host primary -u root -p root  <<EOF
-rs.add("replica01:27017")
-EOF
-
-echo "########### Adding replica02 to replica set ###########"
-
-mongosh --host primary -u root -p root   <<EOF
-rs.add("replica02:27017")
+rs.initiate(
+   {
+      _id: "tutorial-cluster",
+      version: 1,
+      members: [
+         { _id: 0, host : "primary:27017" },
+         { _id: 1, host : "replica01:27017" },
+         { _id: 2, host : "replica02:27017" }
+      ]
+   }
+)
 EOF
 
 echo "########### Getting replica set status again  ###########"
