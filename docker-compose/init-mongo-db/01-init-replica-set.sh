@@ -35,12 +35,11 @@ echo "########### Initiating replica set ###########"
 mongosh --host primary -u root -p afE1wxypaI89kika98xFGIHIJ89HK  <<EOF
 rs.initiate(
    {
-      _id: "tutorial-cluster",
+      _id: "mongo-cluster",
       version: 1,
       members: [
          { _id: 0, host : "primary:27017" },
-         { _id: 1, host : "replica01:27017" },
-         { _id: 2, host : "replica02:27017" }
+         { _id: 1, host : "replica01:27017" }
       ]
    }
 )
