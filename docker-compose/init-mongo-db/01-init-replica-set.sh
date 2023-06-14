@@ -28,11 +28,11 @@ echo "########### All replicas are ready!!!  ###########"
 echo "########### Setting up cluster config  ###########"
 
 echo "########### Getting replica set status  ###########"
-mongosh --host primary -u root -p root <<EOF
+mongosh --host primary -u root -p afE1wxypaI89kika98xFGIHIJ89HK <<EOF
 rs.status()
 EOF
 echo "########### Initiating replica set ###########"
-mongosh --host primary -u root -p root  <<EOF
+mongosh --host primary -u root -p afE1wxypaI89kika98xFGIHIJ89HK  <<EOF
 rs.initiate(
    {
       _id: "tutorial-cluster",
@@ -47,7 +47,7 @@ rs.initiate(
 EOF
 
 echo "########### Getting replica set status again  ###########"
-mongosh --host primary -u root -p root   <<EOF
+mongosh --host primary -u root -p afE1wxypaI89kika98xFGIHIJ89HK   <<EOF
 rs.status()
 EOF
 

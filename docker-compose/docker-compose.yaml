@@ -14,11 +14,12 @@ services:
     image: mongo:5.0.5
     volumes:
       - ./keys/mongo-replica-set.key:/data/db/mongo-replica-set.key
+      - ./data/mongo-1:/data/db
     ports:
       - "27017:27017"
     environment:
           - MONGO_INITDB_ROOT_USERNAME=root
-          - MONGO_INITDB_ROOT_PASSWORD=root
+          - MONGO_INITDB_ROOT_PASSWORD=afE1wxypaI89kika98xFGIHIJ89HK
     networks:
       - mongo-cluster-network
     command:
@@ -32,6 +33,7 @@ services:
     image: mongo:5.0.5
     volumes:
       - ./keys/mongo-replica-set.key:/data/db/mongo-replica-set.key
+      - ./data/mongo-2:/data/db
     ports:
       - "27027:27017"
     networks:
@@ -47,6 +49,7 @@ services:
     image: mongo:5.0.5
     volumes:
       - ./keys/mongo-replica-set.key:/data/db/mongo-replica-set.key
+      - ./data/mongo-3:/data/db
     ports:
       - "27037:27017"
     networks:
