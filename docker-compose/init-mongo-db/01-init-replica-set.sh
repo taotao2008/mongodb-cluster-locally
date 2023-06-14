@@ -15,13 +15,13 @@ until mongo --host replica01 --eval "printjson(db.runCommand({ serverStatus: 1})
     sleep 5
   done
 
-
-echo "########### Waiting for replica 02  ###########"
-until mongo --host replica02 --eval "printjson(db.runCommand({ serverStatus: 1}).ok)"
-  do
-    echo "########### Sleeping  ###########"
-    sleep 5
-  done
+#
+#echo "########### Waiting for replica 02  ###########"
+#until mongo --host replica02 --eval "printjson(db.runCommand({ serverStatus: 1}).ok)"
+#  do
+#    echo "########### Sleeping  ###########"
+#    sleep 5
+#  done
 
 echo "########### All replicas are ready!!!  ###########"
 

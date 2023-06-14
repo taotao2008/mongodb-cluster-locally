@@ -43,22 +43,22 @@ services:
       - "tutorial-cluster"
       - "--keyFile"
       - "/data/db/mongo-replica-set.key"
-
-  replica02:
-    container_name: replica02
-    image: mongo:5.0.5
-    volumes:
-      - ./keys/mongo-replica-set.key:/data/db/mongo-replica-set.key
-      - ./data/mongo-3:/data/db
-    ports:
-      - "27037:27017"
-    networks:
-      - mongo-cluster-network
-    command:
-      - "--replSet"
-      - "tutorial-cluster"
-      - "--keyFile"
-      - "/data/db/mongo-replica-set.key"
+#
+#  replica02:
+#    container_name: replica02
+#    image: mongo:5.0.5
+#    volumes:
+#      - ./keys/mongo-replica-set.key:/data/db/mongo-replica-set.key
+#      - ./data/mongo-3:/data/db
+#    ports:
+#      - "27037:27017"
+#    networks:
+#      - mongo-cluster-network
+#    command:
+#      - "--replSet"
+#      - "tutorial-cluster"
+#      - "--keyFile"
+#      - "/data/db/mongo-replica-set.key"
 
 networks:
   mongo-cluster-network:
